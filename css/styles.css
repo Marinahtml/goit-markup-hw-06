@@ -109,7 +109,6 @@ address {
 .contacts-list {
   display: none;
 }
-
 @media screen and (max-width: 767px) {
   .page-header {
     border-bottom: 1px solid #e7e9fc;
@@ -664,15 +663,20 @@ address {
 .team-svg {
   fill: #f4f4fd;
 }
-/* Що потрібно прописувати для медіа правил для таблет та десктопа?
-@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
-  .team-item-jpg {
-      url("../images/JPG/????@2x.jpg");
+/* Що потрібно прописувати для медіа правил для таблет та десктопа? */
+@media screen and (max-width: 767px) {
+  .team-icon-link {
+    display: block;
   }
+}
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  /* .team-item-jpg {
+      url("../images/JPG/????@2x.jpg");
+  } */
 }
 
 @media screen and (min-width: 1200px) and (min-resolution: 192dpi) {
-  .team-item-jpg {
+  /* .team-item-jpg {
       url("../images/JPG/????@2x.jpg");
-  }
-} */
+  } */
+}
