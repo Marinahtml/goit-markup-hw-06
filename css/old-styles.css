@@ -245,6 +245,10 @@ address {
   overflow: hidden;
 }
 
+.goal {
+  padding: 96px 0;
+}
+
 .goal-container {
   padding-left: 15px;
   padding-right: 15px;
@@ -284,7 +288,6 @@ address {
   letter-spacing: 0.02em;
   color: #434455;
 }
-*/
 
 /* Our Team */
 .team {
@@ -363,7 +366,7 @@ address {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
-  fill: #31d0aa;
+  /* fill: #31d0aa; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -487,7 +490,7 @@ address {
   color: #f4f4fd;
 }
 
-.page-footer-text {
+/* .page-footer-text {
   display: block;
   font-weight: 400;
   max-width: 264px;
@@ -498,7 +501,7 @@ address {
 }
 
 .page-footer-icon-text {
-  display: block;
+  display: flex;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -535,11 +538,12 @@ address {
 .page-icon-link:focus,
 .page-icon-link:hover {
   background-color: #31d0aa;
-}
+} */
 
 .footer-container {
   display: flex;
   align-items: baseline;
+  justify-content: flex-srart;
 }
 
 .page-svg {
