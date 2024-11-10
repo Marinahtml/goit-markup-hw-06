@@ -141,6 +141,8 @@ address {
     display: none;
   }
 
+  /* Menu  */
+
   .mobile-container {
     position: absolute;
     top: 50%;
@@ -299,10 +301,6 @@ address {
 @media screen and (min-width: 768px) {
   .mobile-open-btn {
     display: none;
-  }
-
-  .menu {
-    display: flex;
   }
 
   .page-logo {
