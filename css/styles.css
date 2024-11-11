@@ -181,6 +181,12 @@ address {
     transform: translateX(100%);
   }
 
+  @media screen and (min-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+
   .mobile-menu.is-open {
     transform: translateX(0%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -220,6 +226,12 @@ address {
   }
 
   .mobile-list-link {
+    /* font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: #2e2f42; */
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11111;
@@ -243,7 +255,7 @@ address {
     gap: 24px;
   }
 
-  .mobile-contacts-item {
+  .mobile-contacts-text {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -906,9 +918,6 @@ address {
 }
 
 @media screen and (min-width: 768px) {
-  .footer-logo-text {
-    margin-right: 24px;
-  }
   .page-footer-icon-text {
     justify-content: center;
   }
@@ -1026,21 +1035,19 @@ address {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 72px 24px;
-    /* max-width: 584px; */
-    max-height: 456px;
+    margin: 108px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .footer-container {
     display: flex;
-    /* justify-content: flex-srart; */
-    /* flex-direction: row; */
     flex-wrap: nowrap;
     gap: unset;
+    justify-content: center;
   }
 
   .container {
@@ -1068,6 +1075,12 @@ address {
   .main-page-btn-text {
     margin-bottom: 16px;
   }
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 @media screen and (min-width: 758px) {
@@ -1077,8 +1090,11 @@ address {
     justify-content: left;
     margin-bottom: 16px;
   }
+
   .main-form {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 24px;
   }
 }
@@ -1092,12 +1108,13 @@ address {
   line-height: 2;
   letter-spacing: 0.04em;
   padding-left: 16px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: #fff;
   padding: 16px;
   margin-bottom: 16px;
   margin: unset;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
@@ -1107,12 +1124,22 @@ address {
 }
 
 .main-page-input::placeholder {
-  color: #fff;
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 1158px) {
+  .main-page-input {
+    opacity: 1;
+  }
+
+  .main-page-input::placeholder {
+    color: #fff;
+  }
 }
 
 .main-page-button {
   display: flex;
-  /* margin: auto; */
+  margin: auto;
   justify-content: flex-end;
   align-items: center;
   min-width: 165px;
@@ -1126,17 +1153,12 @@ address {
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
-  /* margin-top: 16px; */
   gap: 16px;
   flex-direction: row;
   padding: 8px 24px;
 }
 
-.main-page-svg {
-  margin-left: 16px;
-}
-
-/* Modal */
+/* Mobile_modal */
 
 .overley {
   position: fixed;
@@ -1348,11 +1370,13 @@ address {
 }
 
 .modal-label-checkbox {
+  display: flex;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  flex-shrink: 0;
 }
 
 .visually-hidden {
