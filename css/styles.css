@@ -152,8 +152,7 @@ address {
       0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
     border-radius: 4px;
-    width: 408px;
-    min-height: 584px;
+    width: 320px;
     padding: 72px 24px 24px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -173,18 +172,22 @@ address {
   .mobile-menu {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 999999999;
     width: 100%;
     height: 100%;
     background: #fff;
     padding: 72px 16px 40px;
     transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
-  @media screen and (min-width: 768px) {
-    .mobile-menu {
-      display: none;
-    }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .mobile-menu.is-open {
@@ -212,7 +215,7 @@ address {
   }
 
   .mobile-menu-nav {
-    margin-bottom: 168px;
+    margin-bottom: auto;
   }
 
   .mobail-contact--list {
@@ -226,12 +229,6 @@ address {
   }
 
   .mobile-list-link {
-    /* font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11111;
-    letter-spacing: 0.02em;
-    color: #2e2f42; */
-
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11111;
@@ -313,6 +310,12 @@ address {
 @media screen and (min-width: 768px) {
   .mobile-open-btn {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
   }
 
   .page-logo {
@@ -495,7 +498,6 @@ address {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  /* margin-top: 72px; */
   margin-bottom: 72px;
   margin-left: auto;
   margin-right: auto;
@@ -503,7 +505,6 @@ address {
 
 @media screen and (min-width: 768px) {
   .business-title {
-    /* padding: 112px 0; */
     max-width: 496px;
     font-size: 56px;
     line-height: 1.07143;
@@ -1038,7 +1039,7 @@ address {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 72px 24px;
-    margin: 108px;
+    padding-left: 108px;
   }
 }
 
